@@ -10,10 +10,16 @@
             <div class="my-6 p-6 bg-white border-b border-gray-200 shadow-sm sm:rounded-lg">
                 <form action="{{ route('notes.store') }}" method="post">
                     @csrf
-                    <x-input type="text" name="title" placeholder="Title" class="w-full" autocomplete="off"></x-input>
-                    <x-textarea name="text" rows="10" placeholder="Start typing here..." class="w-full mt-6"></x-textarea>
-                    <x-primary-button class="mt-6">Save Note</x-primary-button>
+                    <x-input type="text" name="title" field="title" placeholder="Title" class="w-full" autocomplete="off"
+                    :value="@old('title')"
+                    ></x-input>
+
+                    <x-textarea name="text" rows="10" field="text" placeholder="Start typing here..." class="w-full mt-6" :value="@old('text')"></x-textarea>
+
+                    <x-primary-button class="mt-6" 
+                    >Save Note</x-primary-button>
                 </form>
+
             </div>
         </div>
     </div>
