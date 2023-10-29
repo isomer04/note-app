@@ -21,7 +21,7 @@
                         <strong>Created: </strong> {{ $note->created_at->diffForHumans() }}
                     </p>
                     <p class="opacity-70 ml-8">
-                        <strong>&nbsp; &nbsp; Updated at: </strong> {{ $note->updated_at->diffForHumans() }}
+                        <strong>&nbsp; &nbsp; Updated: </strong> {{ $note->updated_at->diffForHumans() }}
                     </p>
 
                     <a href="{{ route('notes.edit', $note) }}" class="btn-link ml-auto">Edit Note</a>
@@ -36,11 +36,20 @@
                 @else
 
                     <p class="opacity-70">
-                        <strong>Deleted at: </strong> {{ $note->deleted_at->diffForHumans() }}
+                        <strong>Deleted: </strong> {{ $note->deleted_at->diffForHumans() }}
                     </p>
                     {{-- <p class="opacity-70 ml-8">
                         <strong>&nbsp; &nbsp; Updated at: </strong> {{ $note->updated_at->diffForHumans() }}
                     </p> --}}
+
+                   <form action="{{ route('trashed.update', $note) }}" method="post" class="ml-auto">
+                        @method('put')
+                        @csrf
+                        <button type="submit" class="btn-link">Restore Note</button>
+                    
+                    </form> 
+
+
 
                     {{-- <a href="{{ route('notes.edit', $note) }}" class="btn-link ml-auto">Edit Note</a> --}}
 
