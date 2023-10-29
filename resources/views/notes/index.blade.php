@@ -19,7 +19,16 @@
             @forelse ($notes as $note)
                 <div class="my-6 p-6 bg-white border-b border-gray-200 shadow-sm sm:rounded-lg">
                     <h2 class="font-bold text-2xl">
-                        <a href="{{ route('notes.show', $note) }}">{{ $note->title }}</a>   {{ $note->title }}
+                        <a 
+                        @if(request()->routeIs('notes.index'))
+
+                            href="{{ route('notes.show', $note) }}"
+                        @else
+                            href="{{ route('trashed.show', $note) }}"
+                        @endif
+
+
+                        >{{ $note->title }}</a>   {{ $note->title }}
                     </h2>
                     <p class="mt-2">
                         {{ Str::limit($note->text, 200) }}
