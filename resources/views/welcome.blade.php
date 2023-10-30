@@ -21,16 +21,16 @@
                     @auth
                         <a href="{{ route('notes.index') }}" class="font-semibold text-gray-600 hover:text-gray-900  text-gray-400  hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500">Notes</a>
                     @else
-                        <a href="{{ route('login') }}" class="font-semibold text-gray-600 hover:text-gray-900  text-gray-400  hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500">Log in</a>
+                        <a href="{{ route('login') }}" class="font-semibold text-white-600 hover:text-gray-900  text-gray-400  hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500">Log in</a>
 
                         @if (Route::has('register'))
-                            <a href="{{ route('register') }}" class="ml-4 font-semibold text-gray-600 hover:text-gray-900  text-gray-400  hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500">Register</a>
+                            <a href="{{ route('register') }}" class="ml-4 font-semibold text-white-600 hover:text-gray-900  text-gray-400  hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500">Register</a>
                         @endif
                     @endauth
                 </div>
             @endif 
             <h1 class="text-5xl text-white">
-                SimpleNote
+                NoteR
 
             </h1>           
         </div>
