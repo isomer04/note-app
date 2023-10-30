@@ -5,6 +5,7 @@ Welcome to the "NoteR" repository! This project is focused on creating a note-ta
 
 Laravel, the open-source PHP web framework, has become one of the most widely used ecosystems for building scalable apps at lightning-quick speed. If you’re a PHP developer looking to take your career to the next level, this course was made for you. Join instructor Shruti Balasa as she takes you on a journey through the fundamentals of the Laravel framework.
 
+![noter](https://github.com/isomer04/note-app/assets/43922158/d3ff0987-2cd9-48c5-84f5-d54d29990ddf)
 ## Learning Objectives
 
 This project is designed to help you achieve the following learning objectives:
